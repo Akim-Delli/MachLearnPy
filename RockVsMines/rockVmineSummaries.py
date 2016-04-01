@@ -10,6 +10,7 @@ data = urllib2.urlopen(target_url)
 # arrange data into list for labels and list of list for attributes
 xList = []
 labels = []
+
 for line in data:
     # split on comma
     row = line.strip().split(',')
