@@ -24,7 +24,7 @@ nRow = len(xList)
 nCol = len(xList[1])
 
 type = [0]*3
-colCounts =[]
+colCounts = []
 
 
 # generate summary statistics for column 3 (e.g.)
