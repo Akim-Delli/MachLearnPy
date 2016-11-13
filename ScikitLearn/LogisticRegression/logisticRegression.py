@@ -65,7 +65,7 @@ plt.show()
 prediction = lr.predict_proba(X_test_std[0, :])
 print(prediction)
 
-
+# regularization
 weights,  params = [], []
 for c in np.arange(-5, 5):
     lr = LogisticRegression(C=10**c, random_state=0)
