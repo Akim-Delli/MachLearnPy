@@ -64,3 +64,19 @@ plt.show()
 
 prediction = lr.predict_proba(X_test_std[0, :])
 print(prediction)
+
+
+weights,  params = [], []
+for c in np.arange(-5, 5):
+    lr = LogisticRegression(C=10**c, random_state=0)
+    lr.fit(X_train_std, y_train)
+    weights.append(lr.coef_[1])
+    params.append(10**c)
+weights = np.array(weights)
+plt.plot(params, weights[:, 0], label='petal length')
+plt.plot(params, weights[:, 1], linestyle='--', label='petal width')
+plt.ylabel('weight coefficient')
+plt.xlabel('C')
+plt.legend(loc='upper left')
+plt.xscale('log')
+plt.show()
