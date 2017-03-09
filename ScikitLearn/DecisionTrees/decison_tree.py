@@ -15,7 +15,7 @@ X_combined = np.vstack((X_train, X_test))
 y_combined = np.hstack((y_train, y_test))
 
 plot_decision_regions(X_combined, y_combined, classifier=tree, test_idx=range(105, 150))
-plt.xlabel('petal lenght [cm]')
+plt.xlabel('petal length [cm]')
 plt.ylabel('petal width [cm]')
 plt.legend(loc='upper left')
 plt.show()
