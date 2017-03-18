@@ -13,3 +13,18 @@ print(df.isnull().sum())
 
 # accessing the underlying Numpy Array of the DataFrame via values
 print(df.values)
+
+# drop rows with missing values
+print(df.dropna())
+
+# drop columns with missing values
+print(df.dropna(axis=1))
+
+# only drop rows where all columns are NaN
+print(df.dropna(how='all'))
+
+# drop rows that have not at least 4 non-NaN values
+df.dropna(thresh=4)
+
+# only drop rows where NaN appear in specific colums (here: 'C')
+print(df.dropna(subset=['C']))
