@@ -8,3 +8,8 @@ csv_data = '''A,B,C,D
 
 df = pd.read_csv(StringIO(csv_data))
 print(df)
+
+print(df.isnull().sum())
+
+# accessing the underlying Numpy Array of the DataFrame via values
+print(df.values)
